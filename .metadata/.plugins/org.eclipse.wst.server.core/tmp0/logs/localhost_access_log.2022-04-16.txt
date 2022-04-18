@@ -1,0 +1,13 @@
+127.0.0.1 - - [16/Apr/2022:22:18:50 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [16/Apr/2022:22:19:23 +0530] "GET /ITE2004_Software_Testing_Project HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [16/Apr/2022:22:19:24 +0530] "GET /ITE2004_Software_Testing_Project/ HTTP/1.1" 200 128
+0:0:0:0:0:0:0:1 - - [16/Apr/2022:22:23:34 +0530] "GET /ITE2004_Software_Testing_Project/orders.jsp HTTP/1.1" 200 128
+0:0:0:0:0:0:0:1 - - [16/Apr/2022:22:23:57 +0530] "GET /ITE2004_Software_Testing_Project/index.jsp HTTP/1.1" 200 128
+0:0:0:0:0:0:0:1 - - [16/Apr/2022:22:24:26 +0530] "GET /ITE2004_Software_Testing_Project/index.jsp HTTP/1.1" 200 128
+0:0:0:0:0:0:0:1 - - [16/Apr/2022:22:24:29 +0530] "GET /ITE2004_Software_Testing_Project/index.jsp HTTP/1.1" 200 128
+0:0:0:0:0:0:0:1 - - [16/Apr/2022:22:24:32 +0530] "GET /ITE2004_Software_Testing_Project/index.jsp HTTP/1.1" 200 149
+0:0:0:0:0:0:0:1 - - [16/Apr/2022:22:31:56 +0530] "GET /ITE2004_Software_Testing_Project/index.jsp HTTP/1.1" 200 129
+0:0:0:0:0:0:0:1 - - [16/Apr/2022:22:33:18 +0530] "GET /ITE2004_Software_Testing_Project/index.jsp HTTP/1.1" 200 129
+0:0:0:0:0:0:0:1 - - [16/Apr/2022:22:38:10 +0530] "GET /ITE2004_Software_Testing_Project/index.jsp HTTP/1.1" 200 525
+0:0:0:0:0:0:0:1 - - [16/Apr/2022:22:46:45 +0530] "GET /ITE2004_Software_Testing_Project/login.jsp HTTP/1.1" 200 1216
+0:0:0:0:0:0:0:1 - - [16/Apr/2022:22:47:03 +0530] "GET /ITE2004_Software_Testing_Project/login.jsp HTTP/1.1" 200 1214

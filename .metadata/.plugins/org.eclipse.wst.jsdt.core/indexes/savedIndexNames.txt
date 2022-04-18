@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+D:\Program Data\ITE2004-Software-Testing-Project\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+346116404.index
+503900376.index
+3637747792.index
+250478628.index
+1091667688.index
+2972687184.index
+1228379491.index
