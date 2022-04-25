@@ -1,31 +1,31 @@
-package servlet;
+package jUnitTest;
 
-// import junit.framework.*;
+//import junit.framework.*;
+
+
+import java.util.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.*;
 
-/**
- * Servlet implementation class AddToCartServlet
- */
-@WebServlet("/add-to-cart")
-public class AddToCartServlet extends HttpServlet {
+//import model.*;
+
+
+public class testAddToCartServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddToCartServlet() {
+    public testAddToCartServlet() {
         // TODO Auto-generated constructor stub
     }
 
@@ -37,20 +37,21 @@ public class AddToCartServlet extends HttpServlet {
 
         try (PrintWriter out = response.getWriter()) {
 
-            ArrayList<Cart> cartList = new ArrayList<>();
+            ArrayList<model.Cart> cartList = new ArrayList<>();
             int id = Integer.parseInt(request.getParameter("id"));
             
-            Cart cm = new Cart();
+            model.Cart cm = new model.Cart();
             
             cm.setId(id);
             cm.setQuantity(1);
             
             HttpSession session = request.getSession();
             
-            ArrayList<Cart> cart_list = (ArrayList<Cart>) session.getAttribute("cart-list");
+            ArrayList<model.Cart> cart_list = (ArrayList<model.Cart>) session.getAttribute("cart-list");
             boolean exist = false;
+            boolean added = false;
             if(cart_list == null){
-                cartList.add(cm); // Add product to cartList
+                added = cartList.add(cm); // Add product to cartList
                 session.setAttribute("cart-list", cartList); // Creating session
                 response.sendRedirect("index.jsp");
             }
@@ -58,7 +59,7 @@ public class AddToCartServlet extends HttpServlet {
                 cartList = cart_list;
 
                 exist = false;
-                for (Cart c : cart_list){
+                for (model.Cart c : cart_list){
                     if (c.getId() == id){
                         exist = true;
                         out.println("<h3 style='color:crimson; text-align: center'>Item Already in Cart. <a href='cart.jsp'>GO to Cart Page</a></h3>");
@@ -70,9 +71,8 @@ public class AddToCartServlet extends HttpServlet {
                     response.sendRedirect("index.jsp");
                 }
             }
-            // TestCase.assertEquals(true, added);
-            // TestCase.assertEquals(true, exist);
+            junit.framework.TestCase.assertEquals(true, added);
+            junit.framework.TestCase.assertEquals(true, exist);
         }
 	}
-
 }
